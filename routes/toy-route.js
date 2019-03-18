@@ -51,7 +51,7 @@ function addToyRoutes(app) {
     })
 
     // UPDATE
-    app.put('/toy/:toyId', (req, res) => {
+    app.put(`${BASE_URL}/:toyId`, (req, res) => {
         const toy = req.body;
         toyService.update(toy)
             .then(toy => res.json(toy))
